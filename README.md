@@ -1,9 +1,9 @@
 README
 ========================================================
 Courseara Data Science - Getting and Cleaning Data
-========================================================
+--------------------------------------------------------
 Peer Assessment Project
-========================================================
+--------------------------------------------------------
 
 The code in this repository operates on the Human Acitivity Recognition Using Smartphones Data set at the UCI Machine Learning Repository.  
 
@@ -56,7 +56,7 @@ Three files can be generated.<br/>
     2. **subData_smartphones_tidy.txt** - includes 79 features containing 'mean' or 'std' in their names.However, features such as 'angle(tBodyGyroJerkMean,gravityMean)' are not extracted even though the name contains 'Mean' because such features are measurements of angle between vectors.<br/>
     3. **meanData_smartphones_tidy.txt** - derived from subData_smartphones_tidy.txt. Each row is the average of each feature variable from subData_smartphones_tidy.txt for each activity and each subject. 
 
-Only **meanData_smartphones_tidy.txt** is uploaded in Coursera for peer assessment. The file **CodeBook.md** includes a complete list and explanations of variables in **meanData_smartphones_tidy.txt**. 
+Only **meanData_smartphones_tidy.txt** is uploaded in Coursera for peer assessment. The file **CodeBook.md** in this repository includes a complete list and explanations of variables in **meanData_smartphones_tidy.txt**. 
 
 Four additional variables are included in all three files. They are:<br/>
     1. Subject - subject ID<br/>
@@ -72,7 +72,8 @@ Listed here is a summary of main procedures in run_analysis.R. There are detaile
     2. Read data from files.<br/>
     3. Add proper column names.<br/>
     4. Label Activity column descriptively.<br/>
-    5. Merge data sets into one set called allData.<br/>
-    6. Extract features containing 'mean' or 'std' in their name and store into a set called subData.<br/>
-    7. Average each feature variable from subData for each activity and each subject across sampling windows and store these averages into a final tidy data set called meanData.<br/>
-    8. Export meanData to a tab-delimited .txt file.
+    5. Add Condition column to indicate whether data is from training or test set<br/>
+    6. Merge data sets into one set called allData.<br/>
+    7. Extract features containing 'mean' or 'std' in their names and store into a set called subData.<br/>
+    8. Average each feature variable from subData for each activity and each subject across sampling windows and store these averages into a final tidy data set called meanData.<br/>
+    9. Export meanData to a tab-delimited .txt file.
